@@ -5,6 +5,7 @@ import './index.css'
 
 import Navbar from './components/Navigation/Navbar'
 import Header from './components/Header/Header'
+import Projects from './components/Projects/Projects'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <Navbar />
       <Header />
+      <Projects />
         
     </>
   )
