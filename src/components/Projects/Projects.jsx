@@ -1,17 +1,52 @@
-import React from 'react';
-import ProjectCard from './ProjectCard';
-
-import VintzenPreview from '../../assets/vintzen_preview.png';
+import React from "react";
+import { motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
+import VintzenPreview from "../../assets/vintzen_preview.png";
+import useBreakpoint from "../misc/useBreakpoint";
 
 const Projects = () => {
-    return (
-        <div className='mt-20'>
-            <h2 className='poppins-regular text-2xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-center'>Projets récents.</h2>
-            
+    const isLg = useBreakpoint(1024); // Détecte si l'écran est "lg" (≥1024px)
 
-            <div className='mt-5'>
-                <ProjectCard title={"Vintzen"} technologies={["React", "Motion Framer", "Figma"]} preview={VintzenPreview} alt={"Image de previsualisation de la landing page de Vintzen"} />
-            </div>
+    const projects = [
+        { title: "Vintzen", technologies: ["React", "Motion Framer", "Figma"], preview: VintzenPreview },
+        { title: "Project 2", technologies: ["React", "Tailwind", "Design"], preview: VintzenPreview },
+        { title: "Project 3", technologies: ["Vue", "Animation", "CSS"], preview: VintzenPreview },
+        { title: "Project 4", technologies: ["Angular", "Testing", "API"], preview: VintzenPreview },
+    ];
+
+    // Étendre les projets pour simuler un défilement infini
+    const extendedProjects = [...projects, ...projects];
+
+    // Durée d'animation en fonction du breakpoint
+    const duration = isLg ? 30 : 10;
+
+    return (
+        <div className="mt-20 overflow-hidden">
+            <h2 className="poppins-regular text-2xl lg:text-4xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-center">
+                Projets récents.
+            </h2>
+
+            <motion.div
+                className="mt-5 flex space-x-5"
+                style={{ display: "flex", gap: "20px" }}
+                initial={{ x: 0 }}
+                animate={{ x: "-100%" }}
+                transition={{
+                    repeat: Infinity,
+                    ease: "linear",
+                    duration: duration, // Utilisation de la durée adaptée
+                }}
+            >
+                {extendedProjects.map((project, index) => (
+                    <ProjectCard
+                        key={index}
+                        title={project.title}
+                        technologies={project.technologies}
+                        preview={project.preview}
+                        alt={`Image de prévisualisation de ${project.title}`}
+                    />
+                ))}
+            </motion.div>
         </div>
     );
 };
