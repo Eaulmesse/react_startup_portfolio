@@ -41,7 +41,7 @@ const Offer = () => {
 
             
 
-            <div className="w-4/5 flex m-auto flex-wrap justify-evenly">
+            <div className="w-4/5 flex m-auto flex-wrap justify-evenly background-layer py-5">
                 <p className="poppins-regular text-gray-400 text-center text-xl mt-5">Je conçois des applications intuitives, réactives et optimisées pour offrir une expérience utilisateur fluide, tout en respectant les délais serrés des startups ambitieuses.</p>
 
                 {offers.map((offer, index) => (

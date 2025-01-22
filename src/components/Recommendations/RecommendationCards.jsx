@@ -6,7 +6,7 @@ import { faComputerMouse } from "@fortawesome/free-solid-svg-icons";
 const RecommendationCards = ({ name, job, text }) => {
 
     return (
-        <div className="min-w-full md:w-[45%] lg:w-[30%] md:min-w-0 p-5 bg-purple-700 rounded-lg shadow-lg overflow-hidden relative mt-5">
+        <div className="min-w-full md:w-[45%] lg:w-[30%] md:min-w-0 p-5 bg-gradient-to-r from-violet-950 to-purple-900 rounded-lg shadow-lg overflow-hidden relative mt-5">
             <div className="absolute right-5">
                 <FontAwesomeIcon icon={faComputerMouse} className="text-white text-xl" />
             </div>

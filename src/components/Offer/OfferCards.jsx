@@ -8,7 +8,7 @@ const OfferCards = ({ title, description, isOpen, handleOpen }) => {
             onClick={handleOpen}
             className={`${
                 isOpen ? "h-auto" : "h-20 md:h-16 "
-            } w-full md:w-[45%] p-5 text-white rounded-lg shadow-lg mt-5 cursor-pointer bg-gradient-to-r from-violet-950 to-purple-900 overflow-hidden`}
+            } w-4/5 md:w-[45%] p-5 text-white rounded-lg shadow-lg mt-5 cursor-pointer bg-gradient-to-r from-violet-950 to-purple-900 overflow-hidden`}
         >
             {/* Titre avec l'icône */}
             <div className={`flex justify-between items-center text-purple-200 ${isOpen ? "h-fit" : "h-full"}`}>
