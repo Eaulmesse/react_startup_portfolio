@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputerMouse } from "@fortawesome/free-solid-svg-icons";
 
 const RecommendationCards = ({ name, job, text }) => {
-    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div className="min-w-full md:w-[45%] lg:w-[30%] md:min-w-0 p-5 bg-purple-700 rounded-lg shadow-lg overflow-hidden relative mt-5">

@@ -22,7 +22,7 @@ const Recommendations = () => {
 
     return (
         <div className="mt-20 overflow-hidden">
-            <h2 className="poppins-regular text-2xl lg:text-4xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-center">
+            <h2 className="poppins-medium text-2xl lg:text-4xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-center">
                 Recommandations.
             </h2>
     
