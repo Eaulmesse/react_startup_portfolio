@@ -6,16 +6,17 @@ import './index.css'
 import Navbar from './components/Navigation/Navbar'
 import Header from './components/Header/Header'
 import Projects from './components/Projects/Projects'
+import Recommendations from './components/Recommendations/Recommendations'
 
 function App() {
 
   return (
-    <>
+    <div>
       <Navbar />
       <Header />
       <Projects />
-        
-    </>
+      <Recommendations />
+    </div>
   )
 }
 
