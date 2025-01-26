@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './index.css'
 
+
 import Navbar from './components/Navigation/Navbar'
 import Header from './components/Header/Header'
 import Projects from './components/Projects/Projects'
@@ -13,7 +14,7 @@ import Contact from './components/Contact/Contact'
 function App() {
 
   return (
-    <div>
+    <div className=''>
       <Navbar />
       <Header />
       <Projects />
