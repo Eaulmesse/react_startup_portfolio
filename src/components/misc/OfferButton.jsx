@@ -1,12 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMeteor } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 
 const OfferButton = ({ label, onClick }) => {
     return (
-        <button onClick={onClick} className="px-5 w-44 poppins-regular m-auto mt-10 bg-purple-600 text-lg py-2 rounded-full flex justify-between items-center shadow shadow-purple-600 hover:shadow-purple-800 text-purple-100">
-            <FontAwesomeIcon icon={faMeteor} />
+        <button onClick={onClick} className="px-5 w-40 poppins-regular mt-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-lg py-2 rounded-full flex justify-between items-center text-white shadow-[0_0px_50px] shadow-violet-600/20">
             {label}
             <FontAwesomeIcon icon={faArrowRight} />
         </button>
