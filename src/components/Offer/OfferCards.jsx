@@ -1,30 +1,38 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
-const OfferCards = ({ title, description, isOpen, handleOpen }) => {
-    return (
-        <div
-            onClick={handleOpen}
-            className={`${
-                isOpen ? "h-auto" : "h-20 md:h-16 "
-            } w-4/5 md:w-[45%] p-5 text-white rounded-lg shadow-lg mt-5 cursor-pointer bg-gradient-to-r from-violet-950 to-purple-900 overflow-hidden`}
-        >
-            {/* Titre avec l'icône */}
-            <div className={`flex justify-between items-center text-purple-200 ${isOpen ? "h-fit" : "h-full"}`}>
-                <p className="poppins-medium text-xl">{title}</p>
-                <FontAwesomeIcon
-                    icon={isOpen ? faChevronDown : faChevronRight}
-                    className="text-lg"
-                />
-            </div>
+const OfferCards = ({ title, description }) => {
+  
+    const [isXL, setIsXL] = useState(window.innerWidth >= 1280);
 
-            {/* Description */}
-            <p className={`poppins-regular text-md my-4 w-[90%] transition-opacity duration-300 ${ isOpen ? "opacity-100 mt-4" : "opacity-0 mt-0"}`} >
-                {description}
-            </p>
-        </div>
-    );
+    useEffect(() => {
+        const handleResize = () => setIsXL(window.innerWidth >= 1280);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    // Variants pour gérer l'état hover
+    const parentVariants = {
+        hover: {}, // Pas d'effet sur le parent directement
+    };
+
+    const childVariants = {
+        hover: { height: "40px" }, // Hauteur lors du hover sur le parent
+    };
+
+  return (
+    <motion.div className="max-w-[256px] w-full flex flex-col items-center justify-center bg-neutral-900 p-5 rounded-2xl relative overflow-hidden m-5"  whileHover="hover" initial="initial" >
+
+        <p className="w-5/6 text-white poppins-bold text-xl lg:text-2xl">{title}</p>
+        <p className="w-5/6 text-white poppins-medium text-sm mt-5">{description}</p>
+
+        <motion.div whileInView={{ height: isXL ? "320px" : "40px"}} className="w-80 h-96 -rotate-6 bg-gradient-to-b from-pink-500 to-purple-500 absolute -bottom-5" variants={childVariants}>
+            <p className="text-center text-white poppins-medium hidden lg:block">Découvrez la carte</p>
+        </motion.div>
+      
+
+    </motion.div>
+  );
 };
 
 export default OfferCards;

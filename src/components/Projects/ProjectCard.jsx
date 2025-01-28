@@ -12,7 +12,7 @@ const ProjectCard = ({ title, technologies, preview, alt }) => {
 
             <div className='flex space-x-2 mt-2'>
                 {technologies.map((tech, index) => (
-                    <div className='text-white poppins-light text-sm bg-purple-500 rounded-lg px-2' key={index}>{tech}</div>
+                    <div className='text-white poppins-light text-sm bg-neutral-800 rounded-lg px-2' key={index}>{tech}</div>
                 ))}
             </div>
            

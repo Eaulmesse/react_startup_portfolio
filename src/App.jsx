@@ -6,6 +6,7 @@ import './index.css'
 
 import Navbar from './components/Navigation/Navbar'
 import Header from './components/Header/Header'
+import Introduction from './components/Introduction/Introduction'
 import Projects from './components/Projects/Projects'
 import Recommendations from './components/Recommendations/Recommendations'
 import Offer from './components/Offer/Offer'
@@ -17,8 +18,8 @@ function App() {
     <div className=''>
       <Navbar />
       <Header />
+      <Introduction />
       <Projects />
-      <Recommendations />
       <Offer />
       <Contact />
     </div>

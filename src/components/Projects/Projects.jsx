@@ -21,9 +21,9 @@ const Projects = () => {
     const duration = isLg ? 30 : 10;
 
     return (
-        <div className="mt-20 overflow-hidden">
-            <h2 className="poppins-medium text-2xl lg:text-4xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-center">
-                Projets récents.
+        <div className="mt-10 overflow-hidden">
+            <h2 className="poppins-semibold  text-white text-xl  text-center">
+                Mes Projets <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-2xl">Récents.</span>
             </h2>
 
             <motion.div
