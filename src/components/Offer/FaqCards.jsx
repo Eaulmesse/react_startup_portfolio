@@ -11,7 +11,6 @@ const FaqCards = ({ title, description }) => {
         setDisplayText(!DisplayText);
     }
 
-    
     return (
         <div className="mt-5">
     

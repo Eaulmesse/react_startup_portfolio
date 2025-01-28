@@ -11,13 +11,13 @@ const OfferCards = ({ title, description }) => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    // Variants pour gérer l'état hover
+    
     const parentVariants = {
-        hover: {}, // Pas d'effet sur le parent directement
+        hover: {}, 
     };
 
     const childVariants = {
-        hover: { height: "40px" }, // Hauteur lors du hover sur le parent
+        hover: { height: "40px" }, 
     };
 
   return (
@@ -26,7 +26,7 @@ const OfferCards = ({ title, description }) => {
         <p className="w-5/6 text-white poppins-bold text-xl lg:text-2xl">{title}</p>
         <p className="w-5/6 text-white poppins-medium text-sm mt-5">{description}</p>
 
-        <motion.div whileInView={{ height: isXL ? "320px" : "40px"}} className="w-80 h-96 -rotate-6 bg-gradient-to-b from-pink-500 to-purple-500 absolute -bottom-5" variants={childVariants}>
+        <motion.div whileInView={{ height: isXL ? "320px" : "40px"}} className="w-80 h-96 -rotate-6 bg-gradient-to-b from-pink-500 to-purple-500 absolute -bottom-5">
             <p className="text-center text-white poppins-medium hidden lg:block">Découvrez la carte</p>
         </motion.div>
       
