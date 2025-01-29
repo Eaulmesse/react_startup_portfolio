@@ -15,8 +15,8 @@ const Disponibility = () => {
 
            
 
-            <div className='flex flex-wrap items-center p-5'>
-                <p className='flex items-center text-white bg-neutral-800 poppins-regular p-5 h-12 rounded-full text-base'>theo.guerin01120@gmail.com</p>
+            <div className='flex  items-center p-5 justify-center sm:justify-start'>
+                <p className='flex items-center text-white bg-neutral-800 poppins-regular p-5 h-12 rounded-full text-sm'>theo.guerin01120@gmail.com</p>
 
             </div>
             
