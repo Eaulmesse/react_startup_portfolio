@@ -11,6 +11,7 @@ import Projects from './components/Projects/Projects'
 import Recommendations from './components/Recommendations/Recommendations'
 import Offer from './components/Offer/Offer'
 import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Projects />
       <Offer />
       <Contact />
+      <Footer />
     </div>
   )
 }
