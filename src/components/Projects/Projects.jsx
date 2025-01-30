@@ -22,7 +22,7 @@ const Projects = () => {
 
     return (
         <div id="projects" className="mt-10 overflow-hidden">
-            <h2 className="poppins-semibold  text-white text-xl  text-center">
+            <h2 className="poppins-semibold  text-white text-xl text-center">
                 Mes Projets <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-2xl">Récents.</span>
             </h2>
 

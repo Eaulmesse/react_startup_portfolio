@@ -1,5 +1,6 @@
 import React from 'react';
 import  AvailableButton from "../misc/AvailableButton";
+import { motion } from "framer-motion";
 
 const Disponibility = () => {
     return (
@@ -16,7 +17,7 @@ const Disponibility = () => {
            
 
             <div className='flex  items-center p-5 justify-center sm:justify-start'>
-                <p className='flex items-center text-white bg-neutral-800 poppins-regular p-5 h-12 rounded-full text-sm'>theo.guerin01120@gmail.com</p>
+                <motion.p whileHover={{ marginLeft: "10px" , scale: 1.2, }} className='flex items-center text-white bg-neutral-800 poppins-regular p-5 h-12 rounded-full text-sm'>theo.guerin01120@gmail.com</motion.p>
 
             </div>
             

@@ -2,6 +2,7 @@ import React from 'react';
 import XLogo from "../../assets/svg/x-logo.png"
 import Malt from "../../assets/svg/malt.svg"
 import Linkedin from "../../assets/svg/linkedin.svg"
+import { motion } from "framer-motion";
 
 const Network = () => {
     return (
@@ -16,16 +17,16 @@ const Network = () => {
 
             <div className='p-5 flex items-center space-x-2 w-full justify-evenly  lg:justify-end space-x-5'>
                 
-                <a href="" className='w-12 '>
-                    <img src={Malt} alt="" />
-                </a>
+                <motion.a whileHover={{ scale: 1.2 }} href="https://www.malt.fr/profile/theoguerin" className='w-12 '>
+                    <img src={Malt} alt="Mon compte Malt" />
+                </motion.a >
                 
-                <a href="" className='w-10' >
-                    <img src={Linkedin} alt="" />
-                </a>
-                <a href="" className='w-12'>
-                    <img src={XLogo} alt="" />
-                </a>
+                <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/guerin-theo/" className='w-10' >
+                    <img src={Linkedin} alt="Mon compte Linkedin" />
+                </motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} href="https://x.com/Eaulmesse" className='w-12'>
+                    <img src={XLogo} alt="Mon compte X" />
+                </motion.a>
                 
             </div>
             
