@@ -5,7 +5,7 @@ import FaqCards from "./FaqCards";
 
 const Offer = () => {
     return (
-        <div className="mt-10 py-10 w-5/6 mx-auto">
+        <div id="offer" className="mt-10 py-10 w-5/6 mx-auto">
             <h2 className="poppins-semibold text-xl  text-white text-center">
                 Mon <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-2xl ">Offre</span>
             </h2>

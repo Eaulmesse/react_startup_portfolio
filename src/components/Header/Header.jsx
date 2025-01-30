@@ -5,7 +5,7 @@ import AvailableButton from '../misc/AvailableButton';
 const Header = () => {
 
     return (
-        <header className='w-[90%] m-auto flex flex-col items-center z-50'>
+        <header id='home' className='w-[90%] m-auto flex flex-col items-center z-50'>
             <div className='mt-5'>
                 <AvailableButton />
             </div>

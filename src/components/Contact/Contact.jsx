@@ -6,7 +6,7 @@ import  AvailableButton from "../misc/AvailableButton";
 
 const Contact = () => {
     return (
-        <div className="w-5/6 h-full m-auto flex flex-col items-stretch lg:flex-row  items-center space-y-5 lg:space-y-0 lg:space-x-5 py-5">
+        <div id='contact' className="w-5/6 h-full m-auto flex flex-col items-stretch lg:flex-row  items-center space-y-5 lg:space-y-0 lg:space-x-5 py-5">
             <Disponibility />
             <Network />
         </div>

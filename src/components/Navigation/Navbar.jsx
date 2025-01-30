@@ -26,6 +26,7 @@ const Navbar = () => {
                 <div className='lg:flex lg:m-auto hidden bg-zinc-900 py-2 px-3 rounded-[25px]'>
                     <NavLinks href={"#home"} text={"accueil."}/>
                     <NavLinks href={"#me"} text={"me."}/>
+                    <NavLinks href={"#projects"} text={"projects."}/>
                     <NavLinks href={"#offer"} text={'offre.'}/>
                     <NavLinks href={"#contact"} text={'contact.'}/>
                 </div>
