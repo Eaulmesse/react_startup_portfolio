@@ -2,6 +2,22 @@ import React from 'react';
 import { motion } from "framer-motion";
 
 const ProjectCard = ({ title, technologies, preview, alt }) => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+    };
+
     return (
         <motion.div whileHover={{ scale: 1.1, rotate: -2 }} className='min-w-[300px] md:min-w-[400px] lg:min-w-[500px] py-10'>
             <div className="relative">
@@ -11,14 +27,24 @@ const ProjectCard = ({ title, technologies, preview, alt }) => {
                 </p>
             </div>
 
-            <div className='flex space-x-2 mt-2 '>
+            <motion.div 
+                className='flex space-x-2 mt-2'
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+            >
                 {technologies.map((tech, index) => (
-                    <div className='text-white poppins-light text-sm bg-neutral-800 rounded-lg px-2' key={index}>{tech}</div>
+                    <motion.div 
+                        className='text-white poppins-light text-sm bg-neutral-800 rounded-lg px-2' 
+                        key={index}
+                        variants={itemVariants}
+                    >
+                        {tech}
+                    </motion.div>
                 ))}
-            </div>
-           
+            </motion.div>
         </motion.div>
-
     );
 };
 

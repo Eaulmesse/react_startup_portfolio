@@ -5,7 +5,7 @@ import VintzenPreview from "../../assets/vintzen_preview.png";
 import useBreakpoint from "../misc/useBreakpoint";
 
 const Projects = () => {
-    const isLg = useBreakpoint(1024); // Détecte si l'écran est "lg" (≥1024px)
+    const isLg = useBreakpoint(1024);
 
     const projects = [
         { title: "Vintzen", technologies: ["React", "Motion Framer", "Figma"], preview: VintzenPreview },
@@ -14,40 +14,61 @@ const Projects = () => {
         { title: "Project 4", technologies: ["Angular", "Testing", "API"], preview: VintzenPreview },
     ];
 
-    // Étendre les projets pour simuler un défilement infini
     const extendedProjects = [...projects, ...projects];
-
-    // Durée d'animation en fonction du breakpoint
     const duration = isLg ? 30 : 10;
 
+    const containerVariants = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: {
+                duration: 0.5
+            }
+        }
+    };
+
     return (
-        <div id="projects" className="mt-10 overflow-hidden">
-            <h2 className="poppins-semibold  text-white text-xl text-center">
+        <motion.div 
+            initial={{ scale: 0.8, opacity: 0 }} 
+            whileInView={{ scale: 1, opacity: 1 }} 
+            transition={{ delay: 0.25, duration: 1 }} 
+            id="projects" 
+            className="mt-24 overflow-hidden"
+        >
+            <h2 className="poppins-semibold text-white text-xl text-center">
                 Mes Projets <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-2xl">Récents.</span>
             </h2>
 
             <motion.div
                 className="mt-5 flex space-x-5"
                 style={{ display: "flex", gap: "20px" }}
-                initial={{ x: 0 }}
-                animate={{ x: "-100%" }}
-                transition={{
-                    repeat: Infinity,
-                    ease: "linear",
-                    duration: duration, // Utilisation de la durée adaptée
-                }}
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
             >
                 {extendedProjects.map((project, index) => (
-                    <ProjectCard
-                        key={index}
-                        title={project.title}
-                        technologies={project.technologies}
-                        preview={project.preview}
-                        alt={`Image de prévisualisation de ${project.title}`}
-                    />
+                    <motion.div key={index} variants={itemVariants}>
+                        <ProjectCard
+                            title={project.title}
+                            technologies={project.technologies}
+                            preview={project.preview}
+                            alt={`Image de prévisualisation de ${project.title}`}
+                        />
+                    </motion.div>
                 ))}
             </motion.div>
-        </div>
+        </motion.div>
     );
 };
 
