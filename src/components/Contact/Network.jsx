@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 
 const Network = () => {
     return (
-        <div className='w-full lg:w-3/5 rounded-2xl bg-neutral-900 flex flex-col justify-between'>
+        <motion.div 
+            initial={{ opacity: 0, translateY: "50px" }} 
+            whileInView={{ opacity: 1, translateY: "0px" }}
+            transition={{ delay: 0.5, duration: 1 }}  
+            viewport={{ once: true }} 
+            className='w-full lg:w-3/5 rounded-2xl bg-neutral-900 flex flex-col justify-between'>
             
             <div className=''>
                 <p className='text-white poppins-bold text-3xl p-5'>Je suis aussi sur les <span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text'>réseaux</span></p>
@@ -30,7 +35,7 @@ const Network = () => {
                 
             </div>
             
-        </div>
+        </motion.div>
     );
 };
 

@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 
 const Disponibility = () => {
     return (
-        <div className='w-full h-max lg:w-2/5 rounded-2xl bg-neutral-900'>
+        <motion.div 
+            initial={{ opacity: 0, translateY: "50px" }} 
+            whileInView={{ opacity: 1, translateY: "0px" }}
+            transition={{ delay: 0.25, duration: 1 }} 
+            viewport={{ once: true }}  
+            className='w-full h-max lg:w-2/5 rounded-2xl bg-neutral-900'>
             
 
             <p className='text-white poppins-bold text-3xl p-5'><span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text'>Disponible</span> pour vos projets<span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text'> web</span></p>
@@ -21,7 +26,7 @@ const Disponibility = () => {
 
             </div>
             
-        </div>
+        </motion.div>
     );
 };
 

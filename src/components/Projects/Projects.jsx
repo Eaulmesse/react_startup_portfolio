@@ -54,6 +54,7 @@ const Projects = () => {
             initial={{ scale: 0.8, opacity: 0 }} 
             whileInView={{ scale: 1, opacity: 1 }} 
             transition={{ delay: 0.25, duration: 1 }} 
+            viewport={{ once: true }}
             id="projects" 
             className="mt-24 overflow-hidden"
         >
