@@ -1,11 +1,12 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import VintzenPreview from "../../assets/vintzen_preview.png";
 import useBreakpoint from "../misc/useBreakpoint";
 
 const Projects = () => {
     const isLg = useBreakpoint(1024);
+    const controls = useAnimation();
 
     const projects = [
         { title: "Vintzen", technologies: ["React", "Motion Framer", "Figma"], preview: VintzenPreview },
@@ -37,6 +38,17 @@ const Projects = () => {
         }
     };
 
+    useEffect(() => {
+        controls.start({
+            x: "-100%",
+            transition: {
+                repeat: Infinity,
+                ease: "linear",
+                duration: duration,
+            }
+        });
+    }, [controls, duration]);
+
     return (
         <motion.div 
             initial={{ scale: 0.8, opacity: 0 }} 
@@ -56,6 +68,7 @@ const Projects = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
+                animate={controls}
             >
                 {extendedProjects.map((project, index) => (
                     <motion.div key={index} variants={itemVariants}>
