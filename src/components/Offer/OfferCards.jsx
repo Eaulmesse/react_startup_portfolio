@@ -21,7 +21,7 @@ const OfferCards = ({ title, description }) => {
     };
 
   return (
-    <motion.div className="max-w-[256px] h-96 w-full flex flex-col items-center  bg-neutral-900 p-5 rounded-2xl relative overflow-hidden m-5"  whileHover="hover" initial="initial" variants={parentVariants}>
+    <motion.div className="max-w-[256px] h-96 w-full flex flex-col items-center  bg-neutral-900 p-5 rounded-2xl relative overflow-hidden mt-5 lg:mx-5"  whileHover="hover" initial="initial" variants={parentVariants}>
 
         <p className="w-5/6 text-white poppins-bold text-xl lg:text-2xl">{title}</p>
         <p className="w-5/6 text-white poppins-medium text-sm mt-5">{description}</p>

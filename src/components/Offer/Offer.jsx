@@ -26,18 +26,18 @@ const Offer = () => {
     const faqContent = [
         {
             
-            title: "Intégration et déploiement continus",
-            description: "J'implémente des pipelines CI/CD pour automatiser les tests et le déploiement, garantissant ainsi des mises à jour rapides et fiables de votre produit."
+            title: "À qui s'adresse mon service de développement web ?",
+            description: "Je suis spécialisé dans l'accompagnement des startups et des entrepreneurs qui souhaitent une présence web moderne, performante et qui convertit. Mon objectif est de transformer votre vision en une interface utilisateur élégante et fonctionnelle."
         },
         {
             
-            title: "Intégration et déploiement continus",
-            description: "J'implémente des pipelines CI/CD pour automatiser les tests et le déploiement, garantissant ainsi des mises à jour rapides et fiables de votre produit."
+            title: "Combien coûte le développement d'un site web ou d'une application ?",
+            description: "Chaque projet est unique. Mes tarifs démarrent à partir de 280e/jour pour un MVP (Minimum Viable Product) et peuvent varier selon la complexité. Je propose toujours un devis personnalisé après un brief détaillé de vos besoins."
         },
         {
             
-            title: "Intégration et déploiement continus",
-            description: "J'implémente des pipelines CI/CD pour automatiser les tests et le déploiement, garantissant ainsi des mises à jour rapides et fiables de votre produit."
+            title: "Combien de temps faut-il pour développer mon projet ?",
+            description: "Un site vitrine prend généralement 2-3 semaines, un MVP de 4 à 8 semaines. Le délai dépend de la complexité de votre projet, de la clarté du cahier des charges et de la rapidité des validations. Je m'engage à livrer dans les temps convenus."
         }
         
     ];
@@ -79,7 +79,7 @@ const Offer = () => {
                 viewport={{ once: true }}
             >
                 {offerContents.map((offer, index) => (
-                    <motion.div className="" key={index} variants={cardVariants(index)}>
+                    <motion.div key={index} variants={cardVariants(index)}>
                         <OfferCards 
                             title={offer.title} 
                             description={offer.description}
