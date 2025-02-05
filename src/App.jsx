@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css'
 
 import Navbar from './components/Navigation/Navbar'
@@ -15,11 +15,18 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Header />
-        <Introduction />
-        <Projects />
-        <Offer />
-        <Contact />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Header />
+              <Introduction />
+              <Projects />
+              <Offer />
+              <Contact />
+            </>
+          } />
+          {/* Ajoutez d'autres routes ici si nécessaire */}
+        </Routes>
         <Footer />
       </div>
     </Router>
