@@ -11,7 +11,7 @@ const Offer = () => {
         },
         {
             title: "Développement Front-End avancé",
-            description: "Utilisant les dernières technologies comme React et Next.js, je crée des interfaces web performantes et réactives. Mon code est propre, maintenable et optimisé pour une expérience utilisateur sans faille."
+            description: "J'utilise React et Next.js pour des interfaces web performantes et réactives, optimisées pour l'utilisateur. Côté backend, j'implémente des APIs robustes avec Node.js ou Python. Mon approche fullstack assure une solution complète et efficace."
         },
         {
             title: "Optimisation des performances",
@@ -27,19 +27,24 @@ const Offer = () => {
         {
             
             title: "À qui s'adresse mon service de développement web ?",
-            description: "Je suis spécialisé dans l'accompagnement des startups et des entrepreneurs qui souhaitent une présence web moderne, performante et qui convertit. Mon objectif est de transformer votre vision en une interface utilisateur élégante et fonctionnelle."
+            description: "Je cible les entreprises et startups qui veulent une application web non seulement belle, mais surtout extrêmement performante et fiable. Je conçois des solutions fullstack qui répondent précisément à vos besoins, pour une expérience utilisateur et une scalabilité sans compromis."
         },
         {
             
             title: "Combien coûte le développement d'un site web ou d'une application ?",
-            description: "Chaque projet est unique. Mes tarifs démarrent à partir de 280e/jour pour un MVP (Minimum Viable Product) et peuvent varier selon la complexité. Je propose toujours un devis personnalisé après un brief détaillé de vos besoins."
+            description: "Le coût d'un projet de développement web est toujours personnalisé, car chaque besoin est unique. Il est directement lié à la complexité et aux fonctionnalités spécifiques que vous souhaitez voir intégrées. Pour vous donner une idée, mon taux journalier moyen est de 300 € HT. Ce tarif reflète mon expertise en technologies modernes comme React, Next.js, Node.js et mon engagement à livrer des solutions performantes, maintenables et sécurisées. Afin de vous fournir une estimation juste et détaillée, je vous invite à un premier échange gratuit. Nous pourrons discuter de votre vision et des fonctionnalités essentielles. Cela me permettra de définir un périmètre clair et de vous présenter un devis précis et transparent, en adéquation avec la valeur que j'apporte à votre projet."
         },
         {
             
             title: "Combien de temps faut-il pour développer mon projet ?",
-            description: "Un site vitrine prend généralement 2-3 semaines, un MVP de 4 à 8 semaines. Le délai dépend de la complexité de votre projet, de la clarté du cahier des charges et de la rapidité des validations. Je m'engage à livrer dans les temps convenus."
+            description: "Le temps de développement varie selon la complexité et les fonctionnalités spécifiques de votre projet. Un site simple peut être livré en quelques semaines. Pour une application plus élaborée avec des fonctionnalités avancées, cela peut prendre quelques mois. Pour vous donner un calendrier réaliste et précis, nous devons échanger sur vos besoins. Cet entretien me permettra de définir le périmètre exact et de vous communiquer une date de livraison claire, en visant toujours l'efficacité et la qualité"
         }
         
+
+
+
+
+
     ];
 
     const containerVariants = {
