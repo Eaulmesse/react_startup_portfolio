@@ -21,7 +21,7 @@ const ProjectCard = ({ title, technologies, preview, alt }) => {
     return (
         <motion.div whileHover={{ scale: 1.1, rotate: -2 }} className='min-w-[300px] md:min-w-[400px] lg:min-w-[500px] py-10'>
             <div className="relative">
-                <img className="z-40 rounded-lg w-full" src={preview} alt={alt} />
+                <img className="z-40 rounded-lg w-full max-h-[250px] object-cover" src={preview} alt={alt} />
                 <p className="absolute z-50 bottom-2 left-2 poppins-regular text-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
                     {title}
                 </p>

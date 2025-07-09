@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import VintzenPreview from "../../assets/vintzen_preview.png";
+import MesiPreview from "../../assets/mesi.png";
+import blackPreview from "../../assets/black.jpg";
 import useBreakpoint from "../misc/useBreakpoint";
 
 const Projects = () => {
@@ -10,9 +12,9 @@ const Projects = () => {
 
     const projects = [
         { title: "Vintzen", technologies: ["React", "Motion Framer", "Figma"], preview: VintzenPreview },
-        { title: "Project 2", technologies: ["React", "Tailwind", "Design"], preview: VintzenPreview },
-        { title: "Project 3", technologies: ["Vue", "Animation", "CSS"], preview: VintzenPreview },
-        { title: "Project 4", technologies: ["Angular", "Testing", "API"], preview: VintzenPreview },
+        { title: "MESI", technologies: ["Angular", "Java", "Spring"], preview: MesiPreview },
+        { title: "Votre Projet", technologies: ["Node", "React", "API"], preview: blackPreview },
+        { title: "Votre Projet", technologies: ["Next", "Testing", "API"], preview: blackPreview },
     ];
 
     const extendedProjects = [...projects, ...projects];
